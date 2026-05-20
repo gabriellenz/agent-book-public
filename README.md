@@ -1,6 +1,6 @@
 # Workflow For Writing A Data-Science Book With Agents
 
-This is a toy public version of the workflow I use to write and manage a long R Markdown / Bookdown manuscript with coding agents. It uses fake data and goofy placeholder chapters, but the structure is the point.
+This folder contains the agent instructions, helper files, and project structure I have been using for a book I am writing. It may also be useful for other people writing long Markdown / Bookdown manuscripts with code engines. I have included fake data and goofy placeholder chapters so you can see how the workflow fits together.
 
 The basic idea is simple: keep prose, book-facing code, data construction, notes, and agent instructions in predictable places so you can ask an agent to work on a chapter, figure, table, citation, or data problem without dumping the whole project into context.
 
