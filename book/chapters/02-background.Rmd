@@ -1,0 +1,13 @@
+# The committee for dry socks
+
+The second toy chapter is here to show chapter ordering. Bookdown uses `_bookdown.yml`, while the source files use prefixes like `01-`, `02-`, and `03-` so humans and agents can keep the order straight.
+
+The committee in this chapter has three rules:
+
+- never store notebooks under a leaky ceiling
+- never trust a spreadsheet without row counts
+- never ask an agent to make every row match
+
+The last rule matters. A better prompt is: merge accurately, report unmatched rows, and explain whether any defensible corrections are available.
+
+For citations, this chapter points to another toy source [@author_notebooks_1902].

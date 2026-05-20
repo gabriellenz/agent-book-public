@@ -1,0 +1,9 @@
+# A tiny methods appendix wearing a raincoat
+
+This chapter explains the fake method in plain language.
+
+Raw data live under `data_construction/data/raw/`. The cleaning script writes clean data to `data_construction/data/clean/`. The render script copies the clean data into `book/data/` and then into the Bookdown render wrapper.
+
+The agent instructions are part of the method. They tell agents where to look, what not to touch, and how to report uncertainty. The result is not magic. It is a project layout that makes careful work easier to ask for and easier to review.
+
+The map idea is also part of the method [@agent_maps_2026]. Rendered figure and table numbers can change. Chunk labels and source files are more stable.

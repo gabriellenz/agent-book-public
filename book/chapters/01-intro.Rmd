@@ -1,0 +1,24 @@
+# Umbrellas and the damp notebook problem
+
+```{r umbrella-inline-stats, include=FALSE, file='analysis/ch01/chunks/umbrella-inline-stats.R'}
+```
+
+This toy chapter studies an imaginary civic problem: towns keep too many notebooks near too many puddles. The average town-year in the fake data has `r avg_umbrellas` umbrellas, and the most umbrella-heavy town-year is `r top_town`.
+
+The point is not the umbrellas. The point is that prose can use values created in an externalized hidden chunk. An agent can update `analysis/ch01/chunks/umbrella-inline-stats.R`, render the book, and check whether this sentence still works.
+
+(ref:umbrella-puddles-caption) Toy towns with more puddles tend to report more umbrellas.
+
+```{r umbrella-puddles, echo=FALSE, fig.cap='(ref:umbrella-puddles-caption)', file='analysis/ch01/figures/umbrella-puddles.R'}
+```
+
+Fig. \@ref(fig:umbrella-puddles) is deliberately simple. It gives the public template a real figure with a stable chunk label and a generated map entry.
+
+(ref:umbrella-summary-caption) Toy umbrella summary by town.
+
+```{r umbrella-summary, echo=FALSE, results='asis', caption_ref='umbrella-summary-caption', file='analysis/ch01/tables/umbrella-summary.R'}
+```
+
+Table \@ref(tab:umbrella-summary) is built from an externalized table chunk. The same pattern works for serious tables: keep the caption and label stable, move the code out of the chapter, and let the agent work on the narrow file.
+
+This fake example cites both an author-managed source [@author_sensible_1901] and an agent-added source [@agent_umbrella_2026].

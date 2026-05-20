@@ -1,0 +1,4 @@
+"step","rows","reason"
+"raw rows",12,"rows in raw source file"
+"retained rows",12,"usable toy rows"
+"lost rows",0,"none in this toy example"

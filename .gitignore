@@ -1,0 +1,32 @@
+# Rendered book outputs
+output/
+book/bookdown/_book/
+book/bookdown/_bookdown_files/
+book/bookdown/*_files/
+book/bookdown/libs/
+book/bookdown/agent-book-public.*
+book/bookdown/*.log
+book/bookdown/*.aux
+book/bookdown/*.tex
+book/bookdown/*.out
+book/bookdown/*.toc
+
+# Files copied into bookdown during render
+book/bookdown/0*.Rmd
+book/bookdown/1*.Rmd
+book/bookdown/citations/
+book/bookdown/analysis/
+book/bookdown/data/
+
+# Local state
+.Rhistory
+.RData
+.DS_Store
+desktop.ini
+*.Zone.Identifier
+
+# Private credentials
+.Renviron
+.env
+credentials/
+secrets/
