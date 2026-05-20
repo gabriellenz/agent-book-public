@@ -1,4 +1,4 @@
-# Agent Book Public Workflow Template
+# Workflow For Writing A Data-Science Book With Agents
 
 This is a toy public version of the workflow I use to write and manage a long R Markdown / Bookdown manuscript with coding agents. It uses fake data and goofy placeholder chapters, but the structure is the point.
 
