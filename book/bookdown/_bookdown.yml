@@ -1,4 +1,4 @@
-book_filename: "agent-book-public"
+book_filename: "book"
 output_dir: "."
 delete_merged_file: true
 rmd_files:

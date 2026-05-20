@@ -42,7 +42,10 @@ copy_clean(file.path(book_root, "citations"), file.path(bookdown_dir, "citations
 copy_clean(file.path(book_root, "analysis"), file.path(bookdown_dir, "analysis"))
 copy_clean(file.path(repo_root, "data_construction", "data", "clean"), file.path(book_root, "data"))
 copy_clean(file.path(book_root, "data"), file.path(bookdown_dir, "data"))
-unlink(Sys.glob(file.path(bookdown_dir, "agent-book-public.*")), recursive = TRUE, force = TRUE)
+unlink(c(
+  Sys.glob(file.path(bookdown_dir, "book.*")),
+  file.path(bookdown_dir, "book_files")
+), recursive = TRUE, force = TRUE)
 unlink(file.path(repo_root, "output"), recursive = TRUE, force = TRUE)
 
 oldwd <- getwd()
@@ -57,8 +60,8 @@ run_child_render <- function(format) {
 
 message("Rendering PDF...")
 pdf_status <- run_child_render("pdf")
-pdf_path <- file.path(bookdown_dir, "_book", "agent-book-public.pdf")
-pdf_root_path <- file.path(bookdown_dir, "agent-book-public.pdf")
+pdf_path <- file.path(bookdown_dir, "_book", "book.pdf")
+pdf_root_path <- file.path(bookdown_dir, "book.pdf")
 pdf_ok <- file.exists(pdf_path) || file.exists(pdf_root_path)
 
 if (!pdf_ok) {
@@ -79,18 +82,18 @@ output_dir <- file.path(repo_root, "output")
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 pdf_candidates <- c(
-  file.path(bookdown_dir, "_book", "agent-book-public.pdf"),
-  file.path(bookdown_dir, "agent-book-public.pdf")
+  file.path(bookdown_dir, "_book", "book.pdf"),
+  file.path(bookdown_dir, "book.pdf")
 )
 pdf_candidates <- pdf_candidates[file.exists(pdf_candidates)]
 if (length(pdf_candidates)) {
-  file.copy(pdf_candidates[[1]], file.path(output_dir, "agent-book-public.pdf"), overwrite = TRUE)
-  message("PDF: ", file.path(output_dir, "agent-book-public.pdf"))
+  file.copy(pdf_candidates[[1]], file.path(output_dir, "book.pdf"), overwrite = TRUE)
+  message("PDF: ", file.path(output_dir, "book.pdf"))
 }
 
 html_candidates <- c(
   file.path(bookdown_dir, "_book", "index.html"),
-  file.path(bookdown_dir, "agent-book-public.html")
+  file.path(bookdown_dir, "book.html")
 )
 html_candidates <- html_candidates[file.exists(html_candidates)]
 if (length(html_candidates)) {

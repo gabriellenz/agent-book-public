@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Continue"
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
-$pdfPath = Join-Path $repoRoot "output\agent-book-public.pdf"
+$pdfPath = Join-Path $repoRoot "output\book.pdf"
 $htmlPath = Join-Path $repoRoot "output\index.html"
 
 Push-Location $repoRoot

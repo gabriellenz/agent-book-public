@@ -54,9 +54,9 @@ Stata is not required for this public template.
 
 For agents: dependency check scripts are included at the repo root. Use the script appropriate for the user's machine, or call `Rscript dependencies.R` directly. Pandoc must be discoverable on `PATH` or through `RSTUDIO_PANDOC`.
 
-## Render The Example
+## Render The Toy Book
 
-To render the book, ask your agent to render it. The agent instructions point it to the render scripts and the dependency checker.
+To render the book, just ask your agent to render it. The agent instructions point it to the render scripts and the dependency checker.
 
 The script:
 
@@ -69,7 +69,7 @@ The script:
 The PDF is written to:
 
 ```text
-output/agent-book-public.pdf
+output/book.pdf
 ```
 
 If PDF rendering fails because LaTeX is not installed, the script tries an HTML render. The HTML output is:
@@ -80,7 +80,7 @@ output/index.html
 
 ## How To Talk To The Book
 
-Examples:
+Here are some examples of how to talk to your book through your agent:
 
 - "Render the book and tell me where the PDF is."
 - "Increase the size of fig. 1.1 and change the fitted line to a loess smoother."
@@ -88,7 +88,7 @@ Examples:
 - "Show me the raw data behind the sentence about the average number of umbrellas."
 - "Check whether any rows were lost when building the clean data."
 
-The small reports in `book/_reports/` are what let you talk naturally about the rendered book. You can say "fix fig. 1.1," and the agent can look up which chunk produced that figure and which source file to edit. Rendered numbers can change; chunk labels and source files are the stable parts.
+The small reports in `book/_reports/` are what let you talk naturally about the rendered book. You can say "fix fig. 1.1," and the agent can look up which code chunk produced that figure and which source file to edit. Rendered figure and table numbers can change; chunk labels and source files are the stable parts.
 
 ## Advice For Agent-Assisted Research
 

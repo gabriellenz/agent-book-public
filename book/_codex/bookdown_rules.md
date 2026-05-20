@@ -8,4 +8,4 @@
 - Keep figure/table captions in the chapter file when possible.
 - Externalized code uses chunk option `file="analysis/chXX/.../chunk-name.R"`.
 - Render from the repo root using the included render script for the user's platform.
-- Some Bookdown/R installations return a nonzero process status after writing the expected output. Before treating a render as failed, check whether `output/agent-book-public.pdf` or `output/index.html` exists.
+- Some Bookdown/R installations return a nonzero process status after writing the expected output. Before treating a render as failed, check whether `output/book.pdf` or `output/index.html` exists.

@@ -4,7 +4,7 @@ book/bookdown/_book/
 book/bookdown/_bookdown_files/
 book/bookdown/*_files/
 book/bookdown/libs/
-book/bookdown/agent-book-public.*
+book/bookdown/book.*
 book/bookdown/*.log
 book/bookdown/*.aux
 book/bookdown/*.tex
