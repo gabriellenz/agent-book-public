@@ -84,6 +84,8 @@ output/index.html
 Here are some examples of how to talk to your book through your agent:
 
 - "Render the book and tell me where the PDF is."
+- "I have just been editing chapter 2, lines 45 through 55. Could you proofread that passage and correct minor mistakes?"
+- "Bring all section headings in the entire book, including the appendices, into line with the style guide; they should be sentence case."
 - "Increase the size of fig. 1.1 and change the fitted line to a loess smoother."
 - "Update the umbrella summary table and report the sample size."
 - "Show me the raw data behind the sentence about the average number of umbrellas."
