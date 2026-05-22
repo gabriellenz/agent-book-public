@@ -2,6 +2,8 @@
 
 Use this note for manuscript regression tables. Keep estimates generated from book-side scripts; do not copy coefficients, confidence intervals, standard errors, or fit statistics by hand from console output.
 
+For prose that interprets coefficients, confidence intervals, null effects, or effect sizes, also read `book/_codex/empirical_writing.md`.
+
 ## Preferred Layout
 
 - Use a compact booktabs-style table, but make it wide enough that the table note reads comfortably. Near-full-page width is fine when it improves note readability.

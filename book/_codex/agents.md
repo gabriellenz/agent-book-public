@@ -4,6 +4,7 @@
 
 - Bookdown structure and paths: `book/_codex/bookdown_rules.md`
 - Figures, tables, and inline chunks: `book/_codex/figures_tables.md`
+- Empirical-result prose, null effects, coefficient interpretation, and effect-size writing: `book/_codex/empirical_writing.md`
 - Data interface: `book/_codex/data.md`
 - Citations: `book/_codex/library.md`
 - Literature/PDF workflow: `book/_codex/literature_workflow.md`
