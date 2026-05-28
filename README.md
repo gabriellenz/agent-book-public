@@ -119,13 +119,11 @@ The wiki is not meant to be a pile of source summaries. A good wiki page explain
 
 ## Using Obsidian
 
-I have started using Obsidian to edit Markdown files in `book/chapters/` instead of RStudio because the writing interface is lighter and nicer for long prose.
+I have started using Obsidian to edit R Markdown files in `book/chapters/` instead of RStudio because the writing surface is lighter, cleaner, and more elegant for long prose.
 
 Reasons it works well with agents:
 
-- It opens the same Markdown files the agent edits, so there is no separate export step.
-- When an agent edits a file, the new text appears quickly in the Obsidian window.
-- It is comfortable for reading, moving around, and manually editing long chapters.
+- When an agent edits a file, the new text appears quickly in the R Markdown document.
 - Community plugins make it highly adaptable; agents can help configure plugin settings when you want the editor to fit your workflow better.
 
 ## PDF Reader
