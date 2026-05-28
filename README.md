@@ -56,8 +56,6 @@ The dependency list is:
 - Python 3, used by the optional literature inventory helper
 - LaTeX is optional. Install a TeX distribution such as TinyTeX, MacTeX, or MiKTeX if you want PDF output. Without LaTeX, use the HTML fallback.
 
-Stata is not required for this public template.
-
 For agents: dependency check scripts are included at the repo root. Use the script appropriate for the user's machine, or call `Rscript dependencies.R` directly. The repo includes PowerShell wrappers for Windows and shell wrappers for macOS/Linux. Pandoc must be discoverable on `PATH` or through `RSTUDIO_PANDOC`; the scripts check common RStudio and Quarto locations on Windows, macOS, and Linux.
 
 ## Render The Toy Book
