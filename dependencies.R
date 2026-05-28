@@ -26,14 +26,31 @@ if (nzchar(python)) {
   cat("Python not found. Book rendering can still work, but optional literature helper scripts may not run.\n")
 }
 
-if (!nzchar(Sys.getenv("RSTUDIO_PANDOC"))) {
+set_pandoc_env <- function() {
+  if (nzchar(Sys.getenv("RSTUDIO_PANDOC"))) return(invisible(TRUE))
+
+  path_pandoc <- Sys.which("pandoc")
+  if (nzchar(path_pandoc)) {
+    Sys.setenv(RSTUDIO_PANDOC = dirname(path_pandoc))
+    return(invisible(TRUE))
+  }
+
   pandoc_candidates <- c(
     "C:/Program Files/RStudio/resources/app/bin/quarto/bin/tools",
-    "C:/Program Files/RStudio/bin/pandoc"
+    "C:/Program Files/RStudio/bin/pandoc",
+    "/Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools",
+    "/Applications/RStudio.app/Contents/Resources/app/bin/pandoc",
+    "/Applications/Quarto.app/Contents/Resources/app/bin/tools",
+    "/opt/quarto/bin/tools",
+    "/usr/lib/rstudio/resources/app/bin/quarto/bin/tools",
+    "/usr/lib/rstudio/resources/app/bin/pandoc"
   )
   pandoc_hit <- pandoc_candidates[dir.exists(pandoc_candidates)]
   if (length(pandoc_hit)) Sys.setenv(RSTUDIO_PANDOC = pandoc_hit[[1]])
+  invisible(length(pandoc_hit) > 0)
 }
+
+set_pandoc_env()
 
 pandoc <- rmarkdown::pandoc_available()
 cat("Pandoc available:", pandoc, "\n")

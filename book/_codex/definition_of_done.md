@@ -7,5 +7,5 @@ For substantive book work:
 3. If render dependencies are uncertain, run the repo's dependency checker.
 4. Render with the included render script for the user's platform.
 5. Check `output/book.pdf` or `output/index.html`.
-6. Check generated maps in `book/_reports/`.
+6. Check generated maps in `book/_reports/`. Confirm they include the expected figure/table numbers, owners, labels, captions, and source paths.
 7. Report what changed and whether render verification passed.
