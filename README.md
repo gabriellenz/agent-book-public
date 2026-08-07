@@ -52,7 +52,6 @@ book/
   wiki/                   # agent-maintained concept and literature-synthesis notes
   bookdown/               # Bookdown render wrapper
   analysis/               # book-facing figures, tables, inline chunks
-  data/                   # clean data copied here for rendering
   _reports/               # generated figure/table/artifact lookup reports
 
 data_construction/
@@ -87,10 +86,10 @@ The script:
 1. runs the registered master data-build command
 2. builds and checks the toy clean datasets from
    `data_construction/data/raw/`
-3. copies chapters from `book/chapters/` into `book/bookdown/`
-4. copies book-facing code and registered data into the render wrapper
-5. renders the Bookdown project
-6. writes maps to `book/_reports/` with figure/table numbers, owners, labels, captions, and source files
+3. copies chapters and book-facing code into the render wrapper
+4. renders the book using the shared clean datasets directly from
+   `data_construction/data/clean/`
+5. writes maps to `book/_reports/` with figure/table numbers, owners, labels, captions, and source files
 
 The PDF is written to:
 

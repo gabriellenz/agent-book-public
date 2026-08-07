@@ -15,7 +15,6 @@ book/bookdown/0*.Rmd
 book/bookdown/1*.Rmd
 book/bookdown/citations/
 book/bookdown/analysis/
-book/bookdown/data/
 
 # Local state
 .Rhistory

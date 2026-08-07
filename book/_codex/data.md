@@ -1,7 +1,15 @@
 # Book Data Interface
 
-- Book-facing code reads from `bookdown/data/` during render.
-- `render_book.R` copies clean data from `data_construction/data/clean/` into `book/data/`, then into `bookdown/data/`.
+- Book-facing code reads shared clean data directly from
+  `data_construction/data/clean/` during render.
+- External scripts run in the `book/bookdown/` knit context, so their relative
+  path to the shared clean-data folder begins
+  `../../data_construction/data/clean/`.
+- `render_book.R` rebuilds the clean data before rendering; it does not keep a
+  second book-side copy.
+- Do not recreate `book/data/` or `book/bookdown/data/`. The registered clean
+  files under `data_construction/data/clean/` are the single source used by
+  book figures, tables, and inline statistics.
 - New data acquisition belongs in `data_construction/`, not in chapter chunks.
 - For APIs or packages, save a local raw copy and keep credentials outside the repo.
 - Treat `data_construction/README.md` as the source of truth for registered

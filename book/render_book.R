@@ -57,13 +57,11 @@ invisible(file.copy(
 ))
 copy_clean(file.path(book_root, "citations"), file.path(bookdown_dir, "citations"))
 copy_clean(file.path(book_root, "analysis"), file.path(bookdown_dir, "analysis"))
-copy_clean(file.path(repo_root, "data_construction", "data", "clean"), file.path(book_root, "data"))
-copy_clean(file.path(book_root, "data"), file.path(bookdown_dir, "data"))
+unlink(file.path(bookdown_dir, "data"), recursive = TRUE, force = TRUE)
 unlink(c(
   Sys.glob(file.path(bookdown_dir, "book.*")),
   file.path(bookdown_dir, "book_files")
 ), recursive = TRUE, force = TRUE)
-unlink(file.path(repo_root, "output"), recursive = TRUE, force = TRUE)
 
 oldwd <- getwd()
 setwd(bookdown_dir)

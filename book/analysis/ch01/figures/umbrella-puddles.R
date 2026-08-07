@@ -1,4 +1,7 @@
-toy <- read.csv("data/toy_umbrella.csv", stringsAsFactors = FALSE)
+toy <- read.csv(
+  "../../data_construction/data/clean/toy_umbrella.csv",
+  stringsAsFactors = FALSE
+)
 
 plot(
   toy$puddles,

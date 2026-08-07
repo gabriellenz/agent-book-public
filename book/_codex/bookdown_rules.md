@@ -4,6 +4,9 @@
 - `bookdown/_bookdown.yml` controls chapter order.
 - Chapter source files live in `chapters/` and are copied into `bookdown/` by `render_book.R`.
 - Use forward-slash relative paths.
+- Book-facing scripts read shared clean datasets with paths beginning
+  `../../data_construction/data/clean/` because they execute in the
+  `book/bookdown/` knit context.
 - Use chunk labels for cross-references: `\@ref(fig:chunk-label)` and `\@ref(tab:chunk-label)`.
 - Keep figure/table captions in the chapter file when possible.
 - Externalized code uses chunk option `file="analysis/chXX/.../chunk-name.R"`.

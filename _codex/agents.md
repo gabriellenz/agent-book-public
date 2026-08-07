@@ -2,7 +2,10 @@
 
 Keep this public template small and reproducible.
 
-- Use relative paths in committed files.
+- Use repository-relative paths for project files. Dependency checkers may
+  probe standard operating-system installation locations, but data, analysis,
+  manuscript, and render code must not depend on a machine-specific project
+  path.
 - Keep raw data raw; generated data belongs in clean/output folders.
 - Keep `AGENTS.md` files as routers and put detailed rules in focused notes.
 - For production-data or replication-interface work, follow

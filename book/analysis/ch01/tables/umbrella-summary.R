@@ -1,4 +1,7 @@
-toy <- read.csv("data/toy_umbrella.csv", stringsAsFactors = FALSE)
+toy <- read.csv(
+  "../../data_construction/data/clean/toy_umbrella.csv",
+  stringsAsFactors = FALSE
+)
 
 summary_table <- aggregate(
   cbind(puddles, umbrellas, notebooks, cocoa_cups) ~ town,
