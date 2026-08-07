@@ -1,8 +1,10 @@
 book_filename: "book"
 output_dir: "."
 delete_merged_file: true
+before_chapter_script: "_common.R"
 rmd_files:
   - "index.Rmd"
   - "01-intro.Rmd"
   - "02-background.Rmd"
   - "03-methods.Rmd"
+  - "04-citations.Rmd"

@@ -11,9 +11,6 @@ link-citations: true
 description: "A tiny public template for agent-assisted R Markdown / Bookdown writing."
 ---
 
-```{r child='_common.R'}
-```
-
 # Preface {-}
 
 This tiny book is fake on purpose. It exists to show how manuscript text, externalized chunks, clean data, citations, maps, and agent instructions fit together.

@@ -1,6 +1,7 @@
 # A tiny methods appendix wearing a raincoat
 
-This chapter explains the fake method in plain language.
+This chapter explains the method for producing replicable datasets as part of
+an article, book, or dissertation.
 
 Raw data live under `data_construction/data/raw/`. The cleaning script writes clean data to `data_construction/data/clean/`. The render script copies the clean data into `book/data/` and then into the Bookdown render wrapper.
 
