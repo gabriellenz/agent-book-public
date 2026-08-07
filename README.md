@@ -98,6 +98,9 @@ The PDF is written to:
 output/book.pdf
 ```
 
+The latest rendered PDF is included in the repository so visitors can preview
+the toy book without installing the rendering tools.
+
 If PDF rendering fails because LaTeX is not installed, the script tries an HTML render. The HTML output is:
 
 ```text

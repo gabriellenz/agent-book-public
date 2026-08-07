@@ -1,5 +1,4 @@
-# Rendered book outputs
-output/
+# Temporary Bookdown render outputs
 book/bookdown/_book/
 book/bookdown/_bookdown_files/
 book/bookdown/*_files/
