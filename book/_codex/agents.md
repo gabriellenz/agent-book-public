@@ -17,6 +17,10 @@
 - `bookdown/` is the render wrapper.
 - `analysis/chXX/` holds book-facing R code.
 - Preserve chunk labels and captions unless explicitly asked.
+- If a figure or table reveals a data problem, fix the production pipeline in
+  `data_construction/`.
+- Use the production datasets and owning commands registered in
+  `data_construction/README.md`.
 - Use generated maps in `_reports/` to resolve figure/table numbers, owners, labels, captions, and source files.
 - `book/_codex/generate_maps.R` is the only map generator in this template. It runs after the render and writes `figure_map.md`, `table_map.md`, and `artifact_map.md`.
 - When a user asks for a rendered figure or table number, look it up in the maps, then edit by stable label/source file. Do not rely on remembered numbering from an earlier render.

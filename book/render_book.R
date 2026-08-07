@@ -38,7 +38,7 @@ set_pandoc_env <- function() {
 set_pandoc_env()
 
 message("Building toy clean data...")
-build_script <- file.path(repo_root, "data_construction", "code", "build_toy_umbrella_data.R")
+build_script <- file.path(repo_root, "data_construction", "build_all.R")
 status <- system2(file.path(R.home("bin"), "Rscript"), shQuote(build_script))
 if (!identical(status, 0L)) stop("Data construction failed.")
 

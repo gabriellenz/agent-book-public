@@ -7,7 +7,7 @@ This toy chapter studies an imaginary civic problem: towns keep too many noteboo
 
 The point is not the umbrellas. The point is that prose can use values created in an externalized hidden chunk. An agent can update `analysis/ch01/chunks/umbrella-inline-stats.R`, render the book, and check whether this sentence still works.
 
-(ref:umbrella-puddles-caption) Toy towns with more puddles tend to report more umbrellas.
+(ref:umbrella-puddles-caption) Toy towns with more puddles tend to report more umbrellas. Town names mark the 2025 observations.
 
 ```{r umbrella-puddles, echo=FALSE, fig.cap='(ref:umbrella-puddles-caption)', file='analysis/ch01/figures/umbrella-puddles.R'}
 ```
