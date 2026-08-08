@@ -6,7 +6,7 @@
 - Prefer simple plots that reveal the raw data.
 - Label axes with units and years.
 - Prefer quiet lines, restrained styling, and designs that remain readable in
-  grayscale. Do not rely on color alone.
+  grayscale. Do not rely on color.
 - For a few series, prefer direct labels when they are clearer than a legend.
   Do not add point markers automatically when the observed dates are already
   obvious.

@@ -19,7 +19,10 @@ command rebuilds the book's main datasets, and how figures and tables should
 use those datasets. The toy example demonstrates the full path with one
 easy-to-find command. The figure guidance is also clearer about simple,
 readable design and about checking that filters or display choices do not hide
-important observations.
+important observations. The focused notes now also carry more practical
+guidance for tables, empirical writing, citation and source checks, selective
+PDF reading, wiki research, scratch work, and lessons worth preserving for the
+next agent.
 
 ## What Makes This Work
 
@@ -39,6 +42,9 @@ important observations.
 - Wiki workflow. `book/wiki/` is for agent-maintained concept notes that connect literatures, recurring ideas, mechanisms, rival explanations, and manuscript sections. Agents are especially useful here: they can inventory folders of PDFs, identify the concepts that keep reappearing, and draft short wiki pages about how those ideas fit together.
 - Citation workflow. BibTeX files live in `book/citations/`, split between author-managed and agent-added sources. Agents check citation metadata against services like Crossref or a primary source record so authors, titles, journals, books, years, and DOIs are not hallucinated. That does not prove the sentence using the citation is right, but you can also ask the agent to check that against the source.
 - Durable lessons. When agents learn something reusable, they add it to focused notes or pipeline lessons instead of leaving it buried in chat history.
+- Safe scratch space. Temporary scripts, logs, extracts, audits, and drafts
+  stay under `scratch/`. Final data and manuscript output never depend on
+  those files.
 - Short agent instructions. `AGENTS.md` files route agents to focused notes instead of filling the context window with every rule.
 - Relative paths. The project should work after cloning into a different folder on Windows, macOS, or Linux.
 
@@ -61,6 +67,8 @@ data_construction/
   data/clean/             # shared clean datasets
   README.md               # guide to build commands and shared datasets
   documentation/          # source notes and pipeline lessons
+
+scratch/                   # temporary probes, logs, extracts, and drafts
 ```
 
 ## Dependencies

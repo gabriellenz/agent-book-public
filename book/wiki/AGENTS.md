@@ -6,6 +6,8 @@ This folder is for agent-maintained Markdown wikis: lightweight knowledge bases 
 
 - Read `book/wiki/_codex/wiki_workflow.md` before creating, editing, or reorganizing wiki pages.
 - For citation and source rules, also read `book/_codex/library.md`.
+- Put temporary searches, extracts, and drafts under `scratch/`; promote
+  durable evidence and synthesis into source notes and wiki pages.
 
 ## Local Rule
 

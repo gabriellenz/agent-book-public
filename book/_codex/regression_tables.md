@@ -34,6 +34,13 @@ Use a detailed table note. At minimum, state:
 - coefficient and confidence-interval convention
 - definitions of non-obvious variables, abbreviations, or outcome conventions
 
+For ordinary least squares, use heteroskedasticity-robust HC2 standard errors
+when no clustering is called for. Use clustered standard errors when repeated
+observations, treatment assignment, or the design creates dependence within a
+substantive unit, and state the clustering level. For generalized linear count
+models, use robust sandwich standard errors unless the model-based variance
+assumption is intentionally being used.
+
 If the displayed outcome uses a manuscript convention that differs from the raw variable name, say so in the note.
 
 If predictors are percentages or shares, state whether they enter in percentage points, proportions, or logs.
@@ -47,3 +54,16 @@ For weighted `lm` models with population weights, do not report base `sigma()` a
 - Use `kableExtra::row_spec(<last_ci_row>, hline_after = TRUE)` to add the separator before model-summary rows.
 - Use `threeparttable = TRUE` for long notes so they stay attached to the table.
 - If the note is too narrow, use `column_spec()` to widen columns enough for a readable note.
+
+## General checks
+
+- Confirm that every model column uses the intended sample and outcome.
+- Report `N` and useful unit or cluster counts.
+- Keep rounding consistent across columns.
+- Leave cells blank when a variable is absent; do not print a zero that could
+  be mistaken for an estimated coefficient.
+- Check that stars, confidence intervals, and note text use the same
+  standard-error calculation.
+- Render the table and inspect wrapping, rules, alignment, page width, and
+  notes. Do not treat valid LaTeX generation as proof that the table is
+  readable.

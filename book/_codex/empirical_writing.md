@@ -5,8 +5,14 @@ Use this note when drafting or revising prose that interprets model estimates, n
 ## Core Stance
 
 - Treat empirical prose as a translation task: convert model output into claims about meaningful contrasts in the world.
+- Name the substantive concept rather than the code variable.
 - Do not write only that a coefficient is insignificant, small, positive, negative, or robust. Explain what the estimate implies over a concrete contrast and whether that implication is large enough to matter for the manuscript's argument.
 - Keep calculations reproducible in hidden chunks under `analysis/chXX/chunks/`; do not hard-code empirical quantities in manuscript prose when they can be computed.
+- Round reader-facing quantities enough to be memorable. Preserve greater
+  precision in hidden calculations, tables, and appendices when it matters.
+- Explain adjustments and model choices in plain language. Move technical
+  details to a caption, note, footnote, or appendix when they would interrupt
+  the argument.
 
 ## Writing About Null Or Near-Null Effects
 
@@ -23,6 +29,23 @@ Use this note when drafting or revising prose that interprets model estimates, n
 
 > Within [sample], there is plenty of variation in [predictor], but little evidence that it explains [outcome]. Moving from the weighted 10th to the 90th percentile of [predictor] means moving from [low] to [high], roughly the difference between [case A] and [case B]. Even using the top of the 95% confidence interval, a change that large could raise [outcome] by only [effect]. That is small compared with the weighted 10th-to-90th-percentile spread in [outcome], about [spread], roughly the difference between [case C] and [case D].
 
+## Descriptive and appendix evidence
+
+- Say what the data directly show before offering a mechanism.
+- Put a source-category or coding caveat where the data are first introduced,
+  not in a detached later section.
+- A useful sequence is: explain the source and coding rule; report relevant
+  observation and unit counts; present one targeted diagnostic; show the
+  figure or table; state the takeaway and limitation.
+- Use concrete labels such as `Observed value` and `Imputed value` rather than
+  internal bookkeeping terms.
+- Report cell counts for subgroup or period comparisons when some cells may be
+  sparse.
+- Explain results in sentences rather than dumping syntax, model objects, raw
+  summaries, or unexplained fixed-effect terminology.
+- Separate a robustness result from the main result. State exactly what
+  changes, what remains stable, and which threat the check addresses.
+
 ## Common Mistakes
 
 - Do not imply that a null estimate proves the effect is zero.
@@ -30,3 +53,7 @@ Use this note when drafting or revising prose that interprets model estimates, n
 - Do not use inconsistent percentile ranges for predictor and outcome unless the prose explains why.
 - Do not leave readers to infer units from a coefficient.
 - Do not let a control variable that proxies for a broad category carry a causal interpretation without explaining what it may absorb.
+- Do not treat a robustness check as proof that every alternative explanation
+  has been eliminated.
+- Do not describe a measure as directly observing a mechanism when it is only
+  a proxy.

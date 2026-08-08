@@ -17,6 +17,8 @@ book/bookdown/citations/
 book/bookdown/analysis/
 
 # Local state
+scratch/*
+!scratch/README.md
 .Rhistory
 .RData
 .DS_Store

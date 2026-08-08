@@ -4,12 +4,14 @@
 
 - Bookdown structure and paths: `book/_codex/bookdown_rules.md`
 - Figures, tables, and inline chunks: `book/_codex/figures_tables.md`
+- Manuscript, heading, caption, and label style: `book/_codex/style_guide.md`
 - Empirical-result prose, null effects, coefficient interpretation, and effect-size writing: `book/_codex/empirical_writing.md`
 - Data interface: `book/_codex/data.md`
 - Citations: `book/_codex/library.md`
 - Literature/PDF workflow: `book/_codex/literature_workflow.md`
 - Wiki/concept notes: `book/wiki/AGENTS.md`
 - End-of-task checks: `book/_codex/definition_of_done.md`
+- Scratch work and durable lessons: `_codex/scratch_and_lessons.md`
 
 ## Do Not Miss
 
