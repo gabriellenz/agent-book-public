@@ -40,7 +40,7 @@ next agent.
   it, and reproduce the result.
 - Literature workflow. PDFs live in `book/literature/`, with helper notes/scripts that let agents inventory sources and summarize only what matters instead of stuffing full articles into the context window.
 - Wiki workflow. `book/wiki/` is for agent-maintained concept notes that connect literatures, recurring ideas, mechanisms, rival explanations, and manuscript sections. Agents are especially useful here: they can inventory folders of PDFs, identify the concepts that keep reappearing, and draft short wiki pages about how those ideas fit together.
-- Citation workflow. BibTeX files live in `book/citations/`, split between author-managed and agent-added sources. Agents check citation metadata against services like Crossref or a primary source record so authors, titles, journals, books, years, and DOIs are not hallucinated. That does not prove the sentence using the citation is right, but you can also ask the agent to check that against the source.
+- Citation workflow. BibTeX files live in `book/citations/`, split between author-managed and agent-added sources. Agents use the public Crossref API or a primary source record to check authors, titles, journals, books, years, and DOIs before adding entries. That does not prove the sentence using the citation is right, so agents check important claims and quotations against the source itself.
 - Durable lessons. When agents learn something reusable, they add it to focused notes or pipeline lessons instead of leaving it buried in chat history.
 - Safe scratch space. Temporary scripts, logs, extracts, audits, and drafts
   stay under `scratch/`. Final data and manuscript output never depend on

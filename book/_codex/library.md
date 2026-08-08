@@ -28,6 +28,57 @@ follow `book/_codex/literature_workflow.md`.
 - Attach page locators to quotations and page-specific claims whenever
   possible.
 
+## Crossref API check
+
+Use Crossref's public REST API as the standard first check for journal
+articles, chapters, books, and other works with Crossref records. No account is
+required. Include a contact email through the `mailto` parameter when making
+automated requests, and identify scripts with a useful `User-Agent`.
+
+- If the DOI is known, URL-encode it and request:
+  `https://api.crossref.org/works/{doi}`
+- If the DOI is unknown, search a compact citation string with:
+  `https://api.crossref.org/works?query.bibliographic={query}&rows=5`
+- Add `mailto=your-address@example.edu` as a query parameter for the polite
+  API pool. Use the researcher's real contact address at run time; do not
+  commit it to the repository.
+
+PowerShell example:
+
+```powershell
+$headers = @{
+  "User-Agent" = "citation-check/1.0 (mailto:your-address@example.edu)"
+}
+$doi = [uri]::EscapeDataString("10.0000/example-doi")
+$uri = "https://api.crossref.org/works/$doi?mailto=your-address@example.edu"
+$record = (Invoke-RestMethod -Uri $uri -Headers $headers).message
+$record | Select-Object DOI, title, author, container-title, publisher,
+  published, volume, issue, page, type
+
+$query = [uri]::EscapeDataString(
+  "Author surname Exact title Journal or publisher Year"
+)
+$uri = "https://api.crossref.org/works?query.bibliographic=$query&rows=5&mailto=your-address@example.edu"
+$items = (Invoke-RestMethod -Uri $uri -Headers $headers).message.items
+$items | Select-Object -First 5 DOI, title, author, container-title,
+  publisher, published, volume, issue, page, type
+```
+
+Inspect the candidate records rather than accepting the first result
+automatically. Match title, authors, work type, journal or publisher, year,
+volume, issue, pages or article number, DOI, ISBN, and edition where relevant.
+Compare the winning record with the PDF front matter or publisher page,
+especially when online and print dates differ or Crossref fields are missing.
+
+If no candidate matches, record that Crossref was inconclusive and use a
+publisher page, library catalog, DOI landing page, or the work itself. Do not
+force a near match, and do not assume every book or historical source has a
+Crossref record. Respect HTTP status codes and slow down after `429` responses.
+
+Crossref validates bibliographic metadata. It does not verify that the source
+supports a manuscript claim, that a quotation is exact, or that a page locator
+is correct; those checks require the source itself.
+
 ## PDFs and source notes
 
 - Inventory `book/literature/` before searching elsewhere or reading every
